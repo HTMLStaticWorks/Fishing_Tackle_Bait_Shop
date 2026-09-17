@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
 PAGE ROUTING (Replaced with Multi-Page Active Link Logic)
 ========================================================= */
 const currentPath = window.location.pathname.split('/').pop() || 'index.html';
@@ -29,9 +29,17 @@ MOBILE MENU
 ========================================================= */
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navLinks");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
+
 if(menuBtn && navMenu) {
     menuBtn.addEventListener("click",() => {
     navMenu.classList.toggle("open");
+    });
+}
+
+if(closeMenuBtn && navMenu) {
+    closeMenuBtn.addEventListener("click",() => {
+    navMenu.classList.remove("open");
     });
 }
 /* =========================================================
