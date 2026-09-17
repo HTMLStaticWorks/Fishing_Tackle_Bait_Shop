@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="images/website-logo.png.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Hook & Harbor | Fishing Tackle & Bait Shop</title>
+    <meta name="description"
+        content="Hook & Harbor Fishing Tackle & Bait Shop &mdash; rods, reels, bait, tackle, local fishing reports and guided fishing trips.">
+    <link rel="stylesheet" href="css/style.css?v=16">
+</head>
+
+<body>
+    <header class="site-header">
+
+        <nav class="navbar container">
+            <a class="logo" href="index.html" aria-label="Hook and Harbor home">
+                        <span class="logo-mark" style="background: transparent; box-shadow: none;">
+          <img src="images/website-logo.png.svg" alt="Hook & Harbor Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </span>
+                <span class="logo-text">
+                    <strong>HOOK & HARBOR</strong>
+                    <small>Fishing Tackle & Bait</small>
+                </span>
+            </a>
+            <div class="nav-links" id="navLinks">
+        <div class="mobile-header">
+          <a href="index.html" class="logo">
+                    <span class="logo-mark" style="background: transparent; box-shadow: none;">
+          <img src="images/website-logo.png.svg" alt="Hook & Harbor Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </span>
+            <span class="logo-text">
+              <strong>HOOK & HARBOR</strong>
+            </span>
+          </a>
+          <button class="icon-btn" id="closeMenuBtn" type="button" aria-label="Close navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="products.html">Products</a>
+                <a href="reports.html">Fishing Reports</a>
+                <a href="trips.html">Guided Trips</a>
+              <div class="mobile-actions">
+          <div class="mobile-theme-rtl">
+            <button class="icon-btn themeToggleMobile" type="button" aria-label="Toggle theme">
+              <span class="themeIconMobile">&#9728;</span>
+            </button>
+            <button class="icon-btn rtlToggleMobile" type="button" aria-label="Toggle RTL">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+            </button>
+          </div>
+          <a class="nav-cta" href="contact.html">Enquire Now</a>
+        </div>
+      </div>
+      <div class="nav-actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+                    <span id="themeIcon">&#9728;</span>
+                </button>
+                <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+                </button>
+                <a class="nav-cta" href="contact.html">Enquire Now</a>
+                <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="page" id="products">
+            <section class="section" style="background: var(--surface-2); padding: 80px 0; margin-bottom: 40px;">
+                <div class="container">
+                    <div class="section-head center">
+                        <div class="section-kicker">Shop fishing gear</div>
+                        <h2>Choose tackle for the way you fish.</h2>
+                        <p>
+                            Explore rods, reels, bait and terminal tackle organized around
+                            practical fishing needs.
+                        </p>
+                    </div>
+                    <div class="filter-bar">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="rods">Rods</button>
+                        <button class="filter-btn" data-filter="reels">Reels</button>
+                        <button class="filter-btn" data-filter="bait">Bait</button>
+                        <button class="filter-btn" data-filter="lures">Lures</button>
+                        <button class="filter-btn" data-filter="terminal">Terminal</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section" style="padding-top: 20px;">
+                <div class="container">
+                    <div class="store-grid" id="productGrid">
+                        <article class="store-item product-item" data-category="rods">
+                            <div class="store-media">
+                                <img src="https://images.pexels.com/photos/6739266/pexels-photo-6739266.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                    alt="Fishing rod, reel and lure equipment" loading="lazy">
+                            </div>
+                            <div class="store-body">
+                                <span class="tag">Rods & Reels</span>
+                                <h3>All-Round Freshwater Combo</h3>
+                                <p>A practical setup for everyday lake and bank fishing.</p>
+                                <div class="store-price">From &#8377;2,499</div>
+                                <div class="store-actions">
+                                    <button class="btn btn-primary enquiry-btn" type="button">Ask about this</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="store-item product-item" data-category="lures">
+                            <div class="store-media">
+                                <img src="https://images.pexels.com/photos/6478171/pexels-photo-6478171.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                    alt="Assorted colorful fishing lures" loading="lazy">
+                            </div>
+                            <div class="store-body">
+                                <span class="tag">Lures</span>
+                                <h3>Assorted Lure Selection</h3>
+                                <p>Multiple lure profiles for changing water, light and activity.</p>
+                                <div class="store-price">From &#8377;399</div>
+                                <div class="store-actions">
+                                    <button class="btn btn-primary enquiry-btn" type="button">Ask about this</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="store-item product-item" data-category="bait">
+                            <div class="store-media">
+                                <img src="https://images.pexels.com/photos/6478143/pexels-photo-6478143.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                    alt="Fishing bait organized in tackle box" loading="lazy">
+                            </div>
+                            <div class="store-body">
+                                <span class="tag">Bait</span>
+                                <h3>Bait & Lure Box</h3>
+                                <p>Keep commonly used bait and lure options organized and ready.</p>
+                                <div class="store-price">From &#8377;299</div>
+                                <div class="store-actions">
+                                    <button class="btn btn-primary enquiry-btn" type="button">Ask about this</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="store-item product-item" data-category="terminal">
+                            <div class="store-media">
+                                <img src="https://images.pexels.com/photos/6478100/pexels-photo-6478100.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                    alt="Metal fishing lure and treble hook" loading="lazy">
+                            </div>
+                            <div class="store-body">
+                                <span class="tag">Terminal</span>
+                                <h3>Hooks & Terminal Kit</h3>
+                                <p>Essential hooks and small terminal tackle for everyday repairs.</p>
+                                <div class="store-price">From &#8377;199</div>
+                                <div class="store-actions">
+                                    <button class="btn btn-primary enquiry-btn" type="button">Ask about this</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="store-item product-item" data-category="reels">
+                            <div class="store-media">
+                                <img src="https://images.pexels.com/photos/1687242/pexels-photo-1687242.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                    alt="Fishing rod and reel over water" loading="lazy">
+                            </div>
+                            <div class="store-body">
+                                <span class="tag">Reels</span>
+                                <h3>Spinning Reel</h3>
+                                <p>Smooth and practical reel option for everyday casting.</p>
+                                <div class="store-price">From &#8377;1,799</div>
+                                <div class="store-actions">
+                                    <button class="btn btn-primary enquiry-btn" type="button">Ask about this</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="store-item product-item" data-category="lures">
+                            <div class="store-media">
+                                <img src="https://images.pexels.com/photos/29718701/pexels-photo-29718701.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                                    alt="Shiny fish-shaped fishing lure over water" loading="lazy">
+                            </div>
+                            <div class="store-body">
+                                <span class="tag">Lures</span>
+                                <h3>Reflective Fish Lure</h3>
+                                <p>A realistic fish profile designed for active casting situations.</p>
+                                <div class="store-price">From &#8377;349</div>
+                                <div class="store-actions">
+                                    <button class="btn btn-primary enquiry-btn" type="button">Ask about this</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section offset-layout" style="margin-top: 60px;">
+                <div class="container offset-container">
+                    <div class="offset-content">
+                        <div class="section-kicker">Need help choosing?</div>
+                        <h2>Tell us how and where you fish.</h2>
+                        <p>
+                            Instead of choosing tackle only by price, tell us about your
+                            target species, water type and preferred technique. We can help
+                            narrow down the practical options.
+                        </p>
+                        <ul class="list">
+                            <li>Freshwater and lake fishing setups.</li>
+                            <li>Bank and boat fishing equipment.</li>
+                            <li>Lure and bait combinations.</li>
+                            <li>Terminal tackle and rigging essentials.</li>
+                        </ul>
+                        <a class="btn btn-primary" href="contact.html" style="margin-top:20px;">
+                            Contact the shop
+                        </a>
+                    </div>
+                    <div class="offset-media">
+                        <img src="https://images.pexels.com/photos/5396319/pexels-photo-5396319.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                            alt="Colorful fishing lures in a tackle box" loading="lazy">
+                    </div>
+                </div>
+            </section>
+            <!-- RELATED SECTION -->
+            <section class="section related-section">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="section-kicker">Complete your setup</div>
+                        <h2>Small tackle details can make a big difference.</h2>
+                        <p>
+                            Build a balanced kit with hooks, line, lures and other essentials
+                            that complement your main rod and reel setup.
+                        </p>
+                    </div>
+                    <div class="minimal-feature">
+                        <div class="minimal-media">
+                            <img src="https://images.pexels.com/photos/6478089/pexels-photo-6478089.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                                alt="Fishing bait and tackle organized in a box" loading="lazy">
+                        </div>
+                        <div class="minimal-content">
+                            <span class="tag">Tackle Essentials</span>
+                            <h3>Keep the essentials within reach.</h3>
+                            <p>
+                                Organize terminal tackle and lure options so you can make quick
+                                changes when conditions or fishing techniques shift.
+                            </p>
+                            <a class="btn btn-primary" href="contact.html">
+                                Ask About Tackle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- NEW RELATED SECTIONS -->
+        <section class="section" style="padding-top: 60px;">
+            <div class="container">
+                <div class="section-head" style="text-align: center; max-width: 600px; margin: 0 auto 40px auto;">
+                    <div class="section-kicker">Quality Assured</div>
+                    <h2>Why Shop at Hook & Harbor?</h2>
+                    <p style="margin-top: 15px;">We handpick every item in our store to ensure you get the best performance on the water.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <div class="card-media" style="height: 180px;">
+                            <img src="images/Expert Advice.png" alt="Expert Advice">
+                        </div>
+                        <div class="card-body" style="text-align: center; padding: 30px 24px;">
+                            <h3>Expert Advice</h3>
+                            <p style="margin-top: 15px;">Our team consists of seasoned anglers who know the local waters. We can help you pick the perfect gear.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media" style="height: 180px;">
+                            <img src="images/Premium Quality.png" alt="Premium Quality">
+                        </div>
+                        <div class="card-body" style="text-align: center; padding: 30px 24px;">
+                            <h3>Premium Quality</h3>
+                            <p style="margin-top: 15px;">We stock only the brands we trust and use ourselves. Durability and performance guaranteed.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media" style="height: 180px;">
+                            <img src="images/Fresh Bait Daily.png" alt="Fresh Bait Daily">
+                        </div>
+                        <div class="card-body" style="text-align: center; padding: 30px 24px;">
+                            <h3>Fresh Bait Daily</h3>
+                            <p style="margin-top: 15px;">Live and frozen bait restocked daily to ensure you have the best chance at landing a big one.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="background: var(--surface-2); padding: 60px 30px; border-radius: 24px; text-align: center;">
+                    <h2>Ready to upgrade your gear?</h2>
+                    <p style="color: var(--muted); margin: 20px auto 30px; max-width: 600px;">Stop by the shop today to see our full collection of rods, reels, and terminal tackle, or contact us to check inventory.</p>
+                    <a href="contact.html" class="btn btn-primary">Contact the Shop</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- =========================================================
+FOOTER
+========================================================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo">
+                                <span class="logo-mark" style="background: transparent; box-shadow: none;">
+          <img src="images/website-logo.png.svg" alt="Hook & Harbor Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </span>
+                        <span class="logo-text">
+                            <strong>HOOK & HARBOR</strong>
+                            <small style="color:rgba(255,255,255,.55)">
+                                Fishing Tackle & Bait
+                            </small>
+                        </span>
+                    </div>
+                    <p>
+                        Practical fishing tackle, local fishing information and guided
+                        experiences for anglers who want more time on the water.
+                    </p>
+                    <div class="footer-social" aria-label="Social media links">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook" title="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1Z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram" title="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.4" cy="6.7" r="1" fill="currentColor" stroke="none" />
+                            </svg>
+                        </a>
+                                      <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"
+                title="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="home2.html">Home 2</a>
+                        <a href="products.html">Products</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Fishing</h4>
+                    <div class="footer-links">
+                        <a href="reports.html">Fishing Reports</a>
+                        <a href="trips.html">Guided Trips</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+            <form class="footer-newsletter" onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
+              <input type="email" placeholder="Email address" required style="padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; outline: none; width: 100%; font-size: 14px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px; padding: 12px; justify-content: center; font-size: 14px;">Subscribe</button>
+            </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>
+                    &copy; 2026 Hook & Harbor. All rights reserved.
+                </span>
+                <button class="back-to-top" id="backToTop" type="button" aria-label="Move to top" style="display: flex; align-items: center; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; transition: transform 0.3s ease;" class="top-arrow-icon"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg> Move to Top
+        </button>
+            </div>
+        </div>
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

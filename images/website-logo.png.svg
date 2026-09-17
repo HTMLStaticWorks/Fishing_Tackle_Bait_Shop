@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <circle cx="150" cy="150" r="132" fill="#063746"/>
+  <circle cx="150" cy="150" r="112" fill="none" stroke="#D7A84B" stroke-width="8"/>
+
+  <!-- Fish -->
+  <path d="M78 151
+           C99 112 148 99 188 122
+           C204 131 218 143 232 151
+           C218 159 204 171 188 180
+           C148 203 99 190 78 151Z"
+        fill="#F5F1E8"/>
+
+  <!-- Tail -->
+  <path d="M80 151 L43 116 L53 151 L43 186 Z"
+        fill="#D7A84B"/>
+
+  <!-- Eye -->
+  <circle cx="183" cy="139" r="7" fill="#063746"/>
+
+  <!-- Fishing hook -->
+  <path d="M143 73
+           C143 105 143 130 154 151
+           C166 174 173 194 158 211
+           C146 224 124 218 124 202
+           C124 194 129 187 137 187"
+        fill="none"
+        stroke="#D7A84B"
+        stroke-width="9"
+        stroke-linecap="round"/>
+
+  <!-- Hook stem -->
+  <path d="M143 73 L143 53"
+        fill="none"
+        stroke="#D7A84B"
+        stroke-width="7"
+        stroke-linecap="round"/>
+</svg>
