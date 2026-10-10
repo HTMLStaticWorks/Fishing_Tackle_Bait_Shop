@@ -17,12 +17,31 @@ MOVE TO TOP
 ========================================================= */
 const backToTop = document.getElementById("backToTop");
 if(backToTop){
-backToTop.addEventListener("click",() => {
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-});
+    // Initial state
+    backToTop.style.opacity = window.scrollY > 300 ? "1" : "0";
+    backToTop.style.visibility = window.scrollY > 300 ? "visible" : "hidden";
+    backToTop.style.pointerEvents = window.scrollY > 300 ? "auto" : "none";
+    backToTop.style.transition = "opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease";
+
+    // Scroll listener
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTop.style.opacity = "1";
+            backToTop.style.visibility = "visible";
+            backToTop.style.pointerEvents = "auto";
+        } else {
+            backToTop.style.opacity = "0";
+            backToTop.style.visibility = "hidden";
+            backToTop.style.pointerEvents = "none";
+        }
+    });
+
+    backToTop.addEventListener("click",() => {
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+    });
 }
 /* =========================================================
 MOBILE MENU

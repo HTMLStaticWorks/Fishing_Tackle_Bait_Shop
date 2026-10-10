@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="images/website-logo.png.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hook & Harbor | Fishing Tackle & Bait Shop</title>
+  <meta name="description"
+    content="Hook & Harbor Fishing Tackle & Bait Shop &mdash; rods, reels, bait, tackle, local fishing reports and guided fishing trips.">
+  <link rel="stylesheet" href="css/style.css?v=16">
+  <style>
+    /* Force hero section styling to bypass CSS cache */
+    .hero {
+      height: 100vh !important;
+      min-height: 100vh !important;
+    }
+
+    .hero-content {
+      text-align: center !important;
+      margin: 0 auto !important;
+    }
+
+    .hero p {
+      margin: 24px auto 0 !important;
+    }
+
+    .hero-actions {
+      justify-content: center !important;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+
+    <nav class="navbar container">
+      <a class="logo" href="index.html" aria-label="Hook and Harbor home">
+                <span class="logo-mark" style="background: transparent; box-shadow: none;">
+          <img src="images/website-logo.png.svg" alt="Hook & Harbor Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </span>
+        <span class="logo-text">
+          <strong>HOOK & HARBOR</strong>
+          <small>Fishing Tackle & Bait</small>
+        </span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <div class="mobile-header">
+          <a href="index.html" class="logo">
+                    <span class="logo-mark" style="background: transparent; box-shadow: none;">
+          <img src="images/website-logo.png.svg" alt="Hook & Harbor Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </span>
+            <span class="logo-text">
+              <strong>HOOK & HARBOR</strong>
+            </span>
+          </a>
+          <button class="icon-btn" id="closeMenuBtn" type="button" aria-label="Close navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="home2.html">Home 2</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="reports.html">Fishing Reports</a>
+        <a href="trips.html">Guided Trips</a>
+        <a href="contact.html">Contact</a>
+              <div class="mobile-actions">
+          <div class="mobile-theme-rtl">
+            <button class="icon-btn themeToggleMobile" type="button" aria-label="Toggle theme">
+              <span class="themeIconMobile">&#9728;</span>
+            </button>
+            <button class="icon-btn rtlToggleMobile" type="button" aria-label="Toggle RTL">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+            </button>
+          </div>
+          <a class="nav-cta" href="products.html">Shop Now</a>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span id="themeIcon">&#9728;</span>
+        </button>
+        <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+                </button>
+        <a class="nav-cta" href="products.html">Shop Now</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="page active" id="about">
+      <section class="section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/about.png') center/cover; min-height: 450px; display: flex; align-items: center; justify-content: center; padding: 20px 0;">
+        <div class="container">
+          <div class="section-head center" style="margin-bottom: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div class="section-kicker" style="color: rgba(255,255,255,0.8);">Our Story</div>
+            <h1 style="font-size: 3rem; margin-bottom: 20px; color: #fff;">More than just a tackle shop.</h1>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+              Born from a lifelong passion for fishing, Hook & Harbor is your trusted partner on the water. We bring decades of local experience to every angler who walks through our doors.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section 1: Why Choose Us -->
+      <section class="section feature-band">
+        <div class="container">
+          <div class="section-head" style="text-align: center;">
+            <div class="section-kicker">Why Choose Us</div>
+            <h2>Dedicated to the Angler's Success.</h2>
+            <p style="max-width: 700px; margin: 0 auto;">
+              We believe that the best memories are made on the water. Our goal is to equip you with not only the best tackle, but the confidence and knowledge to succeed.
+            </p>
+          </div>
+          <div class="timeline">
+            <div class="feature-card">
+              <div class="feature-num">01</div>
+              <h3>Community First</h3>
+              <p>We host local events, workshops, and share daily reports to bring anglers together.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-num">02</div>
+              <h3>Quality Gear</h3>
+              <p>We only stock products that we use and trust ourselves. No gimmicks, just gear that works.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-num">03</div>
+              <h3>Education</h3>
+              <p>From beginners to pros, we take the time to teach knots, techniques, and reading the water.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-num">04</div>
+              <h3>The Thrill</h3>
+              <p>Nothing beats the feeling of a tight line. We're here to help you experience that joy more often.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Our Fishing Expertise -->
+      <section class="section compact" style="background: var(--surface);">
+        <div class="container">
+          <div class="split">
+            <div class="split-media">
+              <img src="https://images.pexels.com/photos/7657046/pexels-photo-7657046.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Expert angler tying a knot" loading="lazy" style="border-radius: 20px; box-shadow: var(--shadow-sm);">
+            </div>
+            <div class="split-content">
+              <div class="section-kicker">Our Fishing Expertise</div>
+              <h2>Mastering the Art of the Catch.</h2>
+              <p>
+                Fishing isn't just a hobby for us; it's a way of life. Our team has spent years navigating local waters, studying fish patterns, and refining techniques to help you land the perfect catch.
+              </p>
+              <ul class="list" style="margin-top: 20px;">
+                <li>Expert advice tailored to local species and conditions.</li>
+                <li>Hand-selected gear tested in real-world scenarios.</li>
+                <li>Deep understanding of seasonal changes and water clarity.</li>
+                <li>A commitment to conservation and sustainable fishing.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Local Fishing Knowledge -->
+      <section class="floating-promo-section">
+        <div class="container">
+            <div class="floating-promo-container">
+                <div class="floating-promo-text">
+                    <div class="section-kicker">Local Fishing Knowledge</div>
+                    <h2>We know these waters.</h2>
+                    <p>
+                        Tides, currents, structure, and seasonal bait runs—we actively monitor the elements so you don't have to guess. Our shop provides up-to-the-minute reports to give you the ultimate edge on the water.
+                    </p>
+                    <a href="reports.html" class="btn btn-primary">Read Local Reports</a>
+                </div>
+                <div class="floating-promo-image">
+                    <img src="images/Beautiful fishing spot.png" alt="Beautiful local fishing spot" loading="lazy">
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Meet the Team -->
+      <section class="section" style="padding-top: 80px; padding-bottom: 80px; background: var(--surface);">
+        <div class="container">
+          <div class="section-head center" style="text-align: center;">
+            <div class="section-kicker">Meet the Team</div>
+            <h2>The Experts Behind the Counter</h2>
+          </div>
+          <div class="grid grid-4">
+            <div class="card" style="text-align: center; padding: 40px 20px; border-radius: 20px;">
+              <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300" alt="John Davis" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 4px solid var(--surface);">
+              <h3 style="margin-bottom: 5px; font-size: 1.3rem;">John Davis</h3>
+              <p style="color: var(--muted); font-size: 15px; margin: 0;">Head Guide & Founder</p>
+            </div>
+            <div class="card" style="text-align: center; padding: 40px 20px; border-radius: 20px;">
+              <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Mike Reynolds" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 4px solid var(--surface);">
+              <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Mike Reynolds</h3>
+              <p style="color: var(--muted); font-size: 15px; margin: 0;">Tackle Specialist</p>
+            </div>
+            <div class="card" style="text-align: center; padding: 40px 20px; border-radius: 20px;">
+              <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Sarah Jenkins" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 4px solid var(--surface);">
+              <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Sarah Jenkins</h3>
+              <p style="color: var(--muted); font-size: 15px; margin: 0;">Operations Manager</p>
+            </div>
+            <div class="card" style="text-align: center; padding: 40px 20px; border-radius: 20px;">
+              <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300" alt="David Chen" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 4px solid var(--surface);">
+              <h3 style="margin-bottom: 5px; font-size: 1.3rem;">David Chen</h3>
+              <p style="color: var(--muted); font-size: 15px; margin: 0;">Bait Master</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 100px; padding-bottom: 100px; background: rgba(0,0,0,0.02);">
+        <div class="container">
+           <div class="section-head" style="text-align:center;">
+             <div class="section-kicker">Customer Reviews</div>
+             <h2>What Our Community Says</h2>
+           </div>
+           <div class="grid grid-4">
+             <div class="card" style="padding:32px 24px; display:flex; flex-direction:column; justify-content:space-between; border-radius:12px;">
+                <p style="font-style:italic; font-size:16px; margin-bottom:20px; line-height:1.6;">"Hook & Harbor is the only place I trust before heading out. Their local reports are incredibly accurate and their gear selection is top-notch."</p>
+                <div style="display:flex; align-items:center; gap:12px;">
+                   <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James L." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                   <strong style="font-size:15px; color:var(--text); margin:0;">James L.</strong>
+                </div>
+             </div>
+             <div class="card" style="padding:32px 24px; display:flex; flex-direction:column; justify-content:space-between; border-radius:12px;">
+                <p style="font-style:italic; font-size:16px; margin-bottom:20px; line-height:1.6;">"I came in completely clueless about what I needed. The staff walked me through everything, didn't upsell me, and made sure I was ready."</p>
+                <div style="display:flex; align-items:center; gap:12px;">
+                   <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily W." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                   <strong style="font-size:15px; color:var(--text); margin:0;">Emily W.</strong>
+                </div>
+             </div>
+             <div class="card" style="padding:32px 24px; display:flex; flex-direction:column; justify-content:space-between; border-radius:12px;">
+                <p style="font-style:italic; font-size:16px; margin-bottom:20px; line-height:1.6;">"Their guided trips are worth every penny. We learned so much about reading the water and found spots we would never have discovered."</p>
+                <div style="display:flex; align-items:center; gap:12px;">
+                   <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Michael B." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                   <strong style="font-size:15px; color:var(--text); margin:0;">Michael B.</strong>
+                </div>
+             </div>
+             <div class="card" style="padding:32px 24px; display:flex; flex-direction:column; justify-content:space-between; border-radius:12px;">
+                <p style="font-style:italic; font-size:16px; margin-bottom:20px; line-height:1.6;">"The quality of their custom rigged baits is unmatched. Itâ€™s clear they take pride in what they do and it shows in the results out on the lake."</p>
+                <div style="display:flex; align-items:center; gap:12px;">
+                   <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Tom H." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                   <strong style="font-size:15px; color:var(--text); margin:0;">Tom H.</strong>
+                </div>
+             </div>
+           </div>
+        </div>
+      </section>
+      <section class="section related-section">
+        <div class="container">
+          <div class="related-card">
+            <div class="related-media">
+              <img src="https://images.pexels.com/photos/5537698/pexels-photo-5537698.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Fishing gear ready for the day" loading="lazy">
+            </div>
+            <div class="related-content">
+              <span class="tag">Get Involved</span>
+              <h3>Ready to join our community?</h3>
+              <p>Stop by the shop to chat with our experts, or reach out to us online to start planning your next fishing adventure.</p>
+              <a class="btn btn-primary" href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <!-- =========================================================
+FOOTER
+========================================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">
+                    <span class="logo-mark" style="background: transparent; box-shadow: none;">
+          <img src="images/website-logo.png.svg" alt="Hook & Harbor Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </span>
+            <span class="logo-text">
+              <strong>HOOK & HARBOR</strong>
+              <small style="color:rgba(255,255,255,.55)">
+                Fishing Tackle & Bait
+              </small>
+            </span>
+          </div>
+          <p>
+            Practical fishing tackle, local fishing information and guided
+            experiences for anglers who want more time on the water.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+              title="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1Z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.4" cy="6.7" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+                          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X"
+                title="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+          </div>
+        </div>
+        <div>
+          <h4>Fishing</h4>
+          <div class="footer-links">
+            <a href="reports.html">Fishing Reports</a>
+            <a href="trips.html">Guided Trips</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+            <form class="footer-newsletter" onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
+              <input type="email" placeholder="Email address" required style="padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; outline: none; width: 100%; font-size: 14px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px; padding: 12px; justify-content: center; font-size: 14px;">Subscribe</button>
+            </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>
+          &copy; 2026 Hook & Harbor. All rights reserved.
+        </span>
+        <button class="back-to-top" id="backToTop" type="button" aria-label="" style="display: flex; align-items: center; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=" transition: transform 0.3s ease;" class="top-arrow-icon"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg> 
+        </button>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" id="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

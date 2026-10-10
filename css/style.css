@@ -1030,20 +1030,26 @@ footer a:hover {
 }
 
 .back-to-top {
-    min-height: 40px;
-    padding: 9px 14px;
-    border: 1px solid rgba(255, 255, 255, .18);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, .06);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--brand);
     color: #fff;
-    font-size: 12px;
-    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: .2s ease;
+    transition: .3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
 
 .back-to-top:hover {
-    background: rgba(255, 255, 255, .14);
+    background: var(--brand-dark);
     transform: translateY(-2px);
 }
 
@@ -1828,6 +1834,26 @@ image on the right = text on the left. */
     .split-content {
         padding: 30px;
     }
+
+    .split-content p {
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .split-content .card-actions {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .split-content .card-actions .btn {
+        width: 85%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: inline-flex;
+        justify-content: center;
+    }
 }
 
 @media(max-width:650px) {
@@ -2308,7 +2334,9 @@ image on the right = text on the left. */
 }
 
 .eyebrow-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
     padding: 6px 14px;
     background: color-mix(in srgb, var(--accent) 15%, transparent);
     color: var(--accent-dark);
@@ -4054,14 +4082,17 @@ html.dark .glass-content h3 {
 /* Forced overrides to remove unwanted lines */
 html,
 body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
 }
 
 .site-header {
     border: none !important;
-    box-shadow: none !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important; /* Add slight shadow on scroll */
     outline: none !important;
     border-bottom: none !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
 }
 
 .navbar {
