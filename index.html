@@ -29,6 +29,46 @@
       justify-content: center !important;
     }
 
+    /* Home 1 "Local knowledge" split section — compact card size & full height image */
+    #home1 .section.compact {
+      padding: 48px 0 !important;
+    }
+
+    #home1 .split {
+      align-items: stretch;
+      min-height: auto !important;
+    }
+
+    #home1 .split-media {
+      position: relative !important;
+      overflow: hidden !important;
+      height: 100% !important;
+      min-height: 100% !important;
+      align-self: stretch !important;
+      aspect-ratio: auto !important;
+    }
+
+    #home1 .split-media img {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+    }
+
+    #home1 .split-content {
+      padding: 32px 38px !important;
+      min-height: auto !important;
+      justify-content: center !important;
+    }
+
+    #home1 .split-content .card-actions {
+      margin-top: 20px !important;
+      padding-top: 0 !important;
+    }
+
     /* Home 1 "Local knowledge" split section — mobile overflow fix */
     @media (max-width: 767px) {
       #home1 .split {
@@ -39,6 +79,24 @@
       #home1 .split-content {
         min-width: 0 !important;
         width: 100% !important;
+      }
+
+      #home1 .split-media {
+        position: relative !important;
+        height: 250px !important;
+        min-height: 250px !important;
+        display: block !important;
+      }
+
+      #home1 .split-media img {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      #home1 .split-content {
+        padding: 24px 20px !important;
       }
 
       #home1 .split-content .section-kicker,
@@ -266,12 +324,12 @@ HOME 1
       <section class="section compact">
         <div class="container">
           <div class="split">
-            <div class="split-media">
+            <div class="split-media" style="position: relative; overflow: hidden; height: 100%; min-height: 100%; align-self: stretch;">
               <img
                 src="https://images.pexels.com/photos/7657046/pexels-photo-7657046.jpeg?auto=compress&cs=tinysrgb&w=1400"
-                alt="Fisherman enjoying a sunset fishing session" loading="lazy">
+                alt="Fisherman enjoying a sunset fishing session" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
             </div>
-            <div class="split-content">
+            <div class="split-content" style="padding: 32px 38px; min-height: auto; justify-content: center;">
               <div class="section-kicker">Local knowledge</div>
               <h2>Know the water before you make the first cast.</h2>
               <p>
@@ -285,7 +343,7 @@ HOME 1
                 <li>Local notes from anglers and guides.</li>
                 <li>Practical preparation tips before your trip.</li>
               </ul>
-              <div class="card-actions">
+              <div class="card-actions" style="margin-top: 20px; padding-top: 0;">
                 <a class="btn btn-primary" href="reports.html">
                   Read reports
                 </a>

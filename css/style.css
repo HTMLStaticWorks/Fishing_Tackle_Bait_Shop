@@ -4225,6 +4225,18 @@ body {
     text-align: right;
 }
 
+/* Home 2 Hero Section Viewport Fit */
+#home2 > .section:first-child {
+    min-height: calc(100vh - 78px);
+    min-height: calc(100dvh - 78px);
+    display: flex;
+    align-items: center;
+}
+
+.home2-hero-grid {
+    gap: 110px;
+}
+
 /* Home 2 Hero Section Mobile Responsive Alignment */
 @media (max-width: 800px) {
     #home2 .section {
@@ -4293,3 +4305,196 @@ body {
         justify-content: center !important;
     }
 }
+
+/* =========================================================
+   FAQ SECTION (CONTACT PAGE)
+   ========================================================= */
+.faq-section {
+    background: var(--bg);
+}
+
+.faq-container {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm, 16px);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.faq-item:hover {
+    border-color: color-mix(in srgb, var(--brand) 45%, var(--line));
+}
+
+.faq-item[open] {
+    border-color: var(--brand);
+    box-shadow: 0 10px 30px rgba(7, 91, 80, 0.08);
+}
+
+html.dark .faq-item[open] {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 28px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--ink);
+    user-select: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question:hover {
+    color: var(--brand);
+}
+
+.faq-item[open] .faq-question {
+    color: var(--brand);
+}
+
+.faq-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--surface-2);
+    color: var(--ink);
+    flex-shrink: 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, color 0.2s ease;
+}
+
+.faq-item[open] .faq-icon-wrap {
+    transform: rotate(180deg);
+    background: var(--brand);
+    color: #ffffff;
+}
+
+.faq-answer {
+    padding: 0 28px 24px 28px;
+    border-top: 1px solid var(--line);
+    margin-top: 4px;
+    padding-top: 18px;
+    animation: faqFadeIn 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+@keyframes faqFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[dir="rtl"] .faq-question {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 1rem;
+    }
+    .faq-answer {
+        padding: 0 20px 20px 20px;
+        padding-top: 16px;
+    }
+    .faq-icon-wrap {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* =========================================================
+   HOME 1 SPLIT SECTION IMAGE FULL FIT FIX
+   ========================================================= */
+#home1 .section.compact {
+    padding: 48px 0;
+}
+
+#home1 .split {
+    align-items: stretch;
+    min-height: auto;
+}
+
+#home1 .split-media {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 100%;
+    align-self: stretch;
+    aspect-ratio: auto;
+}
+
+#home1 .split-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+#home1 .split-content {
+    padding: 32px 38px;
+    min-height: auto;
+    justify-content: center;
+}
+
+#home1 .split-content .card-actions {
+    margin-top: 20px;
+    padding-top: 0;
+}
+
+@media (max-width: 767px) {
+    #home1 .split-media {
+        position: relative;
+        height: 250px;
+        min-height: 250px;
+        display: block;
+    }
+
+    #home1 .split-media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #home1 .split-content {
+        padding: 24px 20px;
+    }
+}
+
+
+

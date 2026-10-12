@@ -10,6 +10,18 @@
     content="Hook & Harbor Fishing Tackle & Bait Shop &mdash; rods, reels, bait, tackle, local fishing reports and guided fishing trips.">
   <link rel="stylesheet" href="css/style.css?v=20">
   <style>
+    /* Keep Home 2 hero section in viewport without altering element sizes */
+    #home2 > .section:first-child {
+      min-height: calc(100vh - 78px);
+      min-height: calc(100dvh - 78px);
+      display: flex;
+      align-items: center;
+    }
+
+    .home2-hero-grid {
+      gap: 110px;
+    }
+
     /* Force hero section styling to bypass CSS cache */
     .hero {
       height: 100vh !important;
@@ -162,9 +174,9 @@
   </header>
   <main>
     <section class="page" id="home2">
-      <div class="section" style="padding-top: 100px; padding-bottom: 80px; overflow: hidden;">
+      <div class="section" style="min-height: calc(100vh - 78px); min-height: calc(100dvh - 78px); display: flex; align-items: center; padding-top: 100px; padding-bottom: 80px; overflow: hidden;">
         <div class="container">
-          <div class="home2-hero-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; align-items: center;">
+          <div class="home2-hero-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 110px; align-items: center;">
             <div class="hero-content" style="text-align: left; max-width: 100%; margin: 0; padding: 0;">
               <span class="eyebrow" style="color: var(--brand) !important; display:inline-block; font-weight:800; text-transform:uppercase; letter-spacing:1px; font-size:13px; margin-bottom:15px;">Your next fishing day starts here</span>
               <h1 style="font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; color: var(--ink) !important;">Better tackle. Better timing. Better days on the water.</h1>
@@ -377,10 +389,10 @@
             <div class="container">
                 <div class="floating-promo-container">
                     <div class="floating-promo-text">
-                        <span class="eyebrow-badge">Limited Offer</span>
-                        <h2>Book Your Adventure</h2>
-                        <p>Experience the thrill of a guided fishing trip with our local experts. Get 15% off your first full-day excursion.</p>
-                        <a href="trips.html" class="btn btn-primary">Claim Offer</a>
+                        <span class="eyebrow-badge">Guided Expeditions</span>
+                        <h2>Discover Untamed Waters</h2>
+                        <p>Navigate secluded riverbanks and productive currents alongside veteran guides. Enjoy hands-on instruction, premium tackle, and access to the region's best hidden fishing spots.</p>
+                        <a href="trips.html" class="btn btn-primary">Explore Guided Trips</a>
                     </div>
                     <div class="floating-promo-image">
                         <img src="images/Book Your Adventure1.png" alt="Fishing adventure" loading="lazy">
@@ -393,9 +405,9 @@
             <div class="container">
                 <div class="glass-newsletter-container">
                     <div class="glass-newsletter-text">
-                        <span class="eyebrow-badge" style="background: rgba(255,255,255,0.2); color: #fff; border:none;">Stay Updated</span>
-                        <h2>Join the Angler's Club</h2>
-                        <p>Get the latest local fishing reports, tackle reviews, and exclusive guided trip discounts delivered straight to your inbox.</p>
+                        <span class="eyebrow-badge" style="background: rgba(255,255,255,0.2); color: #fff; border:none;">Harbor Dispatch</span>
+                        <h2>Tides, Tackle & Water Intel</h2>
+                        <p>Get weekly water condition reports, seasonal bait arrivals, gear spotlights, and secret spot tips delivered straight to your inbox.</p>
                     </div>
                     <div class="glass-card">
                         <form class="glass-form" onsubmit="event.preventDefault();">

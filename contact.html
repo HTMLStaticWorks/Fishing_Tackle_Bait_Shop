@@ -8,7 +8,134 @@
     <title>Contact | Hook & Harbor | Fishing Tackle & Bait Shop</title>
     <meta name="description"
         content="Hook & Harbor Fishing Tackle & Bait Shop &mdash; rods, reels, bait, tackle, local fishing reports and guided fishing trips.">
-    <link rel="stylesheet" href="css/style.css?v=20">
+    <link rel="stylesheet" href="css/style.css?v=21">
+    <style>
+        /* FAQ Section Styles */
+        .faq-section {
+            background: var(--bg);
+        }
+
+        .faq-container {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm, 16px);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+        }
+
+        .faq-item:hover {
+            border-color: color-mix(in srgb, var(--brand) 45%, var(--line));
+        }
+
+        .faq-item[open] {
+            border-color: var(--brand);
+            box-shadow: 0 10px 30px rgba(7, 91, 80, 0.08);
+        }
+
+        html.dark .faq-item[open] {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding: 22px 28px;
+            cursor: pointer;
+            list-style: none;
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: var(--ink);
+            user-select: none;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-question:hover {
+            color: var(--brand);
+        }
+
+        .faq-item[open] .faq-question {
+            color: var(--brand);
+        }
+
+        .faq-icon-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--surface-2);
+            color: var(--ink);
+            flex-shrink: 0;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .faq-item[open] .faq-icon-wrap {
+            transform: rotate(180deg);
+            background: var(--brand);
+            color: #ffffff;
+        }
+
+        .faq-answer {
+            padding: 0 28px 24px 28px;
+            border-top: 1px solid var(--line);
+            margin-top: 4px;
+            padding-top: 18px;
+            animation: faqFadeIn 0.3s ease;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        @keyframes faqFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        [dir="rtl"] .faq-question {
+            text-align: right;
+        }
+
+        @media (max-width: 600px) {
+            .faq-question {
+                padding: 18px 20px;
+                font-size: 1rem;
+            }
+            .faq-answer {
+                padding: 0 20px 20px 20px;
+                padding-top: 16px;
+            }
+            .faq-icon-wrap {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -210,6 +337,80 @@
                     </div>
                 </div>
             </section>
+
+            <!-- =========================================================
+            FAQ SECTION
+            ========================================================= -->
+            <section class="section faq-section" style="padding-top: 10px; padding-bottom: 90px;">
+                <div class="container">
+                    <div class="section-head center">
+                        <div class="section-kicker">Got Questions?</div>
+                        <h2>Frequently Asked Questions</h2>
+                        <p>Find quick answers to common questions about our tackle inventory, fresh bait, order pickup, and guided charters.</p>
+                    </div>
+                    <div class="faq-container">
+                        <details class="faq-item" name="faq-accordion">
+                            <summary class="faq-question">
+                                <span>Do you stock fresh and live bait daily at the store?</span>
+                                <span class="faq-icon-wrap" aria-hidden="true">
+                                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Yes! We receive fresh shipments of live bait daily, including nightcrawlers, live minnows, seasonal shrimp, and cut bait. You can call ahead or stop by early in the morning before your trip to ensure your preferred bait is ready.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item" name="faq-accordion">
+                            <summary class="faq-question">
+                                <span>Can your staff help beginners choose the right tackle setup?</span>
+                                <span class="faq-icon-wrap" aria-hidden="true">
+                                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Absolutely. Whether you're targeting freshwater bass, trout, or coastal saltwater species, our experienced staff will pair you with the ideal rod, reel, line weight, and lure setup tailored to your experience level and budget.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item" name="faq-accordion">
+                            <summary class="faq-question">
+                                <span>How do I reserve or book a guided fishing excursion?</span>
+                                <span class="faq-icon-wrap" aria-hidden="true">
+                                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>You can select "Guided Trip" in the enquiry form above, call our shop directly, or browse available packages on our Trips page. We will coordinate your dates, party size, and target fish, providing certified guides and all premium gear.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item" name="faq-accordion">
+                            <summary class="faq-question">
+                                <span>Do you offer in-store pickup for tackle orders?</span>
+                                <span class="faq-icon-wrap" aria-hidden="true">
+                                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Yes, same-day in-store pickup is available for all in-stock rods, reels, terminal tackle, and lures. Just call ahead or send us an enquiry, and our team will have your order packed and waiting at the register.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item" name="faq-accordion">
+                            <summary class="faq-question">
+                                <span>What is your return and equipment warranty policy?</span>
+                                <span class="faq-icon-wrap" aria-hidden="true">
+                                    <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>All unused tackle in its original packaging can be returned or exchanged within 14 days of purchase with a receipt. For manufacturer warranty claims on reels and high-end rods, our staff will assist you with official repair or replacement.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
     <!-- =========================================================
@@ -294,6 +495,20 @@ FOOTER
     </footer>
     <div class="toast" id="toast"></div>
     <script src="js/script.js"></script>
+    <script>
+        // Smooth FAQ accordion exclusive expand behavior
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('toggle', () => {
+                if (item.open) {
+                    document.querySelectorAll('.faq-item').forEach(other => {
+                        if (other !== item && other.open) {
+                            other.removeAttribute('open');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

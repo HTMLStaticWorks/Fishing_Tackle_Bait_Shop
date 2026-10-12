@@ -150,8 +150,38 @@ CONTACT FORM
 ========================================================= */
 const contactForm = document.getElementById("contactForm");
 if(contactForm) {
-    // Check if we came from an enquiry button
-    if(window.location.search.includes('enquiry=true')) {
+    // Check if we came from an enquiry button or specific quick action
+    if(window.location.search.includes('enquiry=bait')) {
+        setTimeout(() => {
+            const topic = document.getElementById("topic");
+            const message = document.getElementById("message");
+            if(topic) topic.value = "availability";
+            if(message){
+                message.value = "Hello, I would like to check today's live/fresh bait stock, pricing, and counter pickup availability.";
+                message.focus();
+            }
+        }, 100);
+    } else if(window.location.search.includes('enquiry=delivery')) {
+        setTimeout(() => {
+            const topic = document.getElementById("topic");
+            const message = document.getElementById("message");
+            if(topic) topic.value = "delivery";
+            if(message){
+                message.value = "Hello, I would like to check delivery options, shipping timeline, and dispatch rates for tackle.";
+                message.focus();
+            }
+        }, 100);
+    } else if(window.location.search.includes('enquiry=availability')) {
+        setTimeout(() => {
+            const topic = document.getElementById("topic");
+            const message = document.getElementById("message");
+            if(topic) topic.value = "availability";
+            if(message){
+                message.value = "Hello, I would like to check real-time product availability and pricing for specific equipment.";
+                message.focus();
+            }
+        }, 100);
+    } else if(window.location.search.includes('enquiry=true')) {
         setTimeout(() => {
             const message = document.getElementById("message");
             if(message){
