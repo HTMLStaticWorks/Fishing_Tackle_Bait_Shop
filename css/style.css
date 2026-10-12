@@ -1247,12 +1247,13 @@ footer a:hover {
     }
 
     .split {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .split-media {
         aspect-ratio: 16/10;
-        min-height: 400px;
+        min-height: 0;
+        min-width: 0;
     }
 
     .related-card {
@@ -1825,19 +1826,29 @@ image on the right = text on the left. */
 
     .split {
         min-height: 0;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .split-media {
-        min-height: auto;
+        min-height: 0;
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
     }
 
     .split-content {
         padding: 30px;
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .split-content p {
-        text-align: center;
-        margin-inline: auto;
+        text-align: left;
+        margin-inline: 0;
+        width: 100%;
+        max-width: 100%;
     }
 
     .split-content .card-actions {
@@ -1955,13 +1966,15 @@ image on the right = text on the left. */
     }
 
     .split-media {
-        min-height: 270px;
+        min-height: 0;
+        min-width: 0;
         height: auto;
         aspect-ratio: 16/10;
     }
 
     .split-content {
         min-height: 270px;
+        min-width: 0;
         padding: 26px 24px;
     }
 
@@ -1979,13 +1992,15 @@ image on the right = text on the left. */
 
 @media(max-width:650px) {
     .split-media {
-        min-height: 230px;
+        min-height: 0;
+        min-width: 0;
         height: auto;
         aspect-ratio: 16/10;
     }
 
     .split-content {
         min-height: 0;
+        min-width: 0;
         padding: 24px 20px;
     }
 
@@ -2268,7 +2283,9 @@ image on the right = text on the left. */
         left: 20px;
     }
 
-    .timeline .feature-card {
+    .timeline .feature-card,
+    .timeline .feature-card:nth-child(odd),
+    .timeline .feature-card:nth-child(even) {
         width: calc(100% - 50px);
         margin-left: 50px !important;
         margin-right: 0 !important;
@@ -2277,11 +2294,17 @@ image on the right = text on the left. */
     }
 
     .timeline .feature-card h3,
-    .timeline .feature-card p {
+    .timeline .feature-card p,
+    .timeline .feature-card:nth-child(odd) h3,
+    .timeline .feature-card:nth-child(odd) p,
+    .timeline .feature-card:nth-child(even) h3,
+    .timeline .feature-card:nth-child(even) p {
         text-align: left !important;
     }
 
-    .timeline .feature-card::before {
+    .timeline .feature-card::before,
+    .timeline .feature-card:nth-child(odd)::before,
+    .timeline .feature-card:nth-child(even)::before {
         left: -39px !important;
         right: auto !important;
     }
@@ -2291,7 +2314,9 @@ image on the right = text on the left. */
         right: 20px;
     }
 
-    [dir="rtl"] .timeline .feature-card {
+    [dir="rtl"] .timeline .feature-card,
+    [dir="rtl"] .timeline .feature-card:nth-child(odd),
+    [dir="rtl"] .timeline .feature-card:nth-child(even) {
         margin-right: 50px !important;
         margin-left: 0 !important;
         text-align: right !important;
@@ -2299,11 +2324,17 @@ image on the right = text on the left. */
     }
 
     [dir="rtl"] .timeline .feature-card h3,
-    [dir="rtl"] .timeline .feature-card p {
+    [dir="rtl"] .timeline .feature-card p,
+    [dir="rtl"] .timeline .feature-card:nth-child(odd) h3,
+    [dir="rtl"] .timeline .feature-card:nth-child(odd) p,
+    [dir="rtl"] .timeline .feature-card:nth-child(even) h3,
+    [dir="rtl"] .timeline .feature-card:nth-child(even) p {
         text-align: right !important;
     }
 
-    [dir="rtl"] .timeline .feature-card::before {
+    [dir="rtl"] .timeline .feature-card::before,
+    [dir="rtl"] .timeline .feature-card:nth-child(odd)::before,
+    [dir="rtl"] .timeline .feature-card:nth-child(even)::before {
         right: -39px !important;
         left: auto !important;
     }
@@ -4192,4 +4223,73 @@ body {
 [dir="rtl"] .field textarea,
 [dir="rtl"] .field select {
     text-align: right;
+}
+
+/* Home 2 Hero Section Mobile Responsive Alignment */
+@media (max-width: 800px) {
+    #home2 .section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .home2-hero-grid,
+    #home2 .container > div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        width: 100% !important;
+    }
+
+    #home2 .hero-content {
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 4px !important;
+    }
+
+    #home2 .hero-content .eyebrow {
+        font-size: 12px !important;
+        letter-spacing: 0.5px !important;
+        margin-bottom: 14px !important;
+        display: inline-block !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        white-space: normal !important;
+        word-break: normal !important;
+    }
+
+    #home2 .hero-content h1 {
+        font-size: clamp(2rem, 6.5vw, 2.5rem) !important;
+        line-height: 1.18 !important;
+        margin-bottom: 16px !important;
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    #home2 .hero-content p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        margin: 0 auto 24px auto !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+    }
+
+    #home2 .hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+    }
+
+    #home2 .hero-actions .btn {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
 }

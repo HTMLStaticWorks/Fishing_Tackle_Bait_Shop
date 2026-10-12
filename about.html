@@ -8,7 +8,7 @@
   <title>Hook & Harbor | Fishing Tackle & Bait Shop</title>
   <meta name="description"
     content="Hook & Harbor Fishing Tackle & Bait Shop &mdash; rods, reels, bait, tackle, local fishing reports and guided fishing trips.">
-  <link rel="stylesheet" href="css/style.css?v=16">
+  <link rel="stylesheet" href="css/style.css?v=20">
   <style>
     /* Force hero section styling to bypass CSS cache */
     .hero {
@@ -27,6 +27,54 @@
 
     .hero-actions {
       justify-content: center !important;
+    }
+
+    /* Keep paragraph and heading text on the left side for timeline cards in mobile views */
+    @media (max-width: 800px) {
+      .timeline .feature-card,
+      .timeline .feature-card:nth-child(odd),
+      .timeline .feature-card:nth-child(even) {
+        text-align: left !important;
+        align-items: flex-start !important;
+      }
+
+      .timeline .feature-card h3,
+      .timeline .feature-card p,
+      .timeline .feature-card:nth-child(odd) h3,
+      .timeline .feature-card:nth-child(odd) p,
+      .timeline .feature-card:nth-child(even) h3,
+      .timeline .feature-card:nth-child(even) p {
+        text-align: left !important;
+      }
+    }
+
+    /* Keep split section and paragraph text properly aligned and fitted on all mobile views */
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+
+      .split-media {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .split-content {
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: left !important;
+      }
+
+      .split-content p {
+        text-align: left !important;
+        margin-inline: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
     }
   </style>
 </head>

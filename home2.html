@@ -8,7 +8,7 @@
   <title>Hook & Harbor | Fishing Tackle & Bait Shop</title>
   <meta name="description"
     content="Hook & Harbor Fishing Tackle & Bait Shop &mdash; rods, reels, bait, tackle, local fishing reports and guided fishing trips.">
-  <link rel="stylesheet" href="css/style.css?v=16">
+  <link rel="stylesheet" href="css/style.css?v=20">
   <style>
     /* Force hero section styling to bypass CSS cache */
     .hero {
@@ -27,6 +27,75 @@
 
     .hero-actions {
       justify-content: center !important;
+    }
+
+    /* Fix Home 2 hero section text alignment & prevent dashing/overflowing on all mobile views */
+    @media (max-width: 800px) {
+      #home2 .section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+      }
+
+      .home2-hero-grid,
+      #home2 .container > div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        width: 100% !important;
+      }
+
+      #home2 .hero-content {
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 4px !important;
+      }
+
+      #home2 .hero-content .eyebrow {
+        font-size: 12px !important;
+        letter-spacing: 0.5px !important;
+        margin-bottom: 14px !important;
+        display: inline-block !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        white-space: normal !important;
+        word-break: normal !important;
+      }
+
+      #home2 .hero-content h1 {
+        font-size: clamp(2rem, 6.5vw, 2.5rem) !important;
+        line-height: 1.18 !important;
+        margin-bottom: 16px !important;
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+      }
+
+      #home2 .hero-content p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        margin: 0 auto 24px auto !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+      }
+
+      #home2 .hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+      }
+
+      #home2 .hero-actions .btn {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+      }
     }
   </style>
 </head>
@@ -95,7 +164,7 @@
     <section class="page" id="home2">
       <div class="section" style="padding-top: 100px; padding-bottom: 80px; overflow: hidden;">
         <div class="container">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; align-items: center;">
+          <div class="home2-hero-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; align-items: center;">
             <div class="hero-content" style="text-align: left; max-width: 100%; margin: 0; padding: 0;">
               <span class="eyebrow" style="color: var(--brand) !important; display:inline-block; font-weight:800; text-transform:uppercase; letter-spacing:1px; font-size:13px; margin-bottom:15px;">Your next fishing day starts here</span>
               <h1 style="font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; color: var(--ink) !important;">Better tackle. Better timing. Better days on the water.</h1>
