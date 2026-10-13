@@ -2660,20 +2660,40 @@ image on the right = text on the left. */
     justify-content: center;
     align-items: flex-start;
     text-align: start;
+    color: #10231e;
 }
 
 .floating-promo-text h2 {
     font-size: clamp(34px, 4vw, 48px);
     margin-bottom: 20px;
     line-height: 1.1;
-    color: var(--ink);
+    color: #10231e;
 }
 
 .floating-promo-text p {
-    color: var(--muted);
+    color: #60716b;
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 30px;
+}
+
+/* Keep promo card text dark and readable in dark mode */
+html.dark .floating-promo-text,
+html.dark .floating-promo-text h2 {
+    color: #10231e !important;
+}
+
+html.dark .floating-promo-text p {
+    color: #60716b !important;
+}
+
+html.dark .floating-promo-text .section-kicker {
+    color: #075b50 !important;
+}
+
+html.dark .floating-promo-text .eyebrow-badge {
+    color: #b98218 !important;
+    background: rgba(229, 173, 61, 0.15) !important;
 }
 
 [dir="rtl"] .glass-card {

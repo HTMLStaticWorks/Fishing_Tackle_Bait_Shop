@@ -8,7 +8,7 @@
   <title>Hook & Harbor | Fishing Tackle & Bait Shop</title>
   <meta name="description"
     content="Hook & Harbor Fishing Tackle & Bait Shop &mdash; rods, reels, bait, tackle, local fishing reports and guided fishing trips.">
-  <link rel="stylesheet" href="css/style.css?v=20">
+  <link rel="stylesheet" href="css/style.css?v=21">
   <style>
     /* Keep Home 2 hero section in viewport without altering element sizes */
     #home2 > .section:first-child {
@@ -108,6 +108,19 @@
         text-align: center !important;
         justify-content: center !important;
       }
+    }
+
+    /* Ensure text on white promo card remains dark in dark mode */
+    html.dark .floating-promo-text,
+    html.dark .floating-promo-text h2 {
+      color: #10231e !important;
+    }
+    html.dark .floating-promo-text p {
+      color: #60716b !important;
+    }
+    html.dark .floating-promo-text .eyebrow-badge {
+      color: #b98218 !important;
+      background: rgba(229, 173, 61, 0.15) !important;
     }
   </style>
 </head>
